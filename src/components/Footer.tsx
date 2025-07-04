@@ -1,9 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Star, MapPin, Clock, Zap, Gift2, Crown, Sparkles } from 'lucide-react';
+import { ExternalLink, Star, MapPin, Clock, Zap, Gift, Crown, Sparkles } from 'lucide-react';
 
 const Footer = () => {
   const [currentAdIndex, setCurrentAdIndex] = useState(0);
@@ -233,7 +232,7 @@ const Footer = () => {
                       className="w-full bg-gradient-to-r from-eco-500 to-eco-600 hover:from-eco-600 hover:to-eco-700 text-white font-semibold transition-all duration-300 hover:shadow-lg"
                       size="sm"
                     >
-                      <Gift2 className="w-4 h-4 mr-2" />
+                      <Gift className="w-4 h-4 mr-2" />
                       Profiter de l'offre
                     </Button>
                   </CardContent>
