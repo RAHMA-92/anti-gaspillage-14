@@ -327,7 +327,7 @@ const Footer = () => {
         {/* Copyright amélioré */}
         <div className="text-center pt-6 border-t border-eco-200">
           <p className="text-sm text-gray-600 mb-2">
-            © 2024 EcoShare Algeria - Plateforme de partage alimentaire algérienne
+            © 2024 Anti-Gaspillage Algeria - Plateforme de partage alimentaire algérienne
           </p>
           <div className="flex items-center justify-center gap-2 mt-2">
             <Star className="w-4 h-4 text-eco-500 animate-pulse" />

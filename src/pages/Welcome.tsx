@@ -42,7 +42,7 @@ const Welcome = () => {
             <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 animate-fade-in">
               Bienvenue sur{" "}
               <span className="bg-gradient-to-r from-eco-600 via-eco-700 to-eco-800 bg-clip-text text-transparent">
-                EcoShare
+                Anti-Gaspillage
               </span>
             </h1>
             
@@ -99,10 +99,10 @@ const Welcome = () => {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Pourquoi choisir EcoShare ?
+            Pourquoi choisir Anti-Gaspillage ?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Découvrez les fonctionnalités qui font d'EcoShare la plateforme de partage la plus avancée
+            Découvrez les fonctionnalités qui font d'Anti-Gaspillage la plateforme de partage la plus avancée
           </p>
         </div>
 

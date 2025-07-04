@@ -233,7 +233,7 @@ const Home = () => {
       <section className="px-2 sm:px-4 py-8 sm:py-16 bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl sm:text-3xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
-            Actions Rapides
+            {t('quickActions')}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-2">
             <Card className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => navigate('/add-product')}>
@@ -241,8 +241,8 @@ const Home = () => {
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-eco-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                   <Camera className="w-6 h-6 sm:w-8 sm:h-8 text-eco-600" />
                 </div>
-                <h3 className="font-semibold text-sm sm:text-lg mb-2">Ajouter un produit</h3>
-                <p className="text-xs sm:text-sm text-gray-600">Partagez vos produits avec la communauté</p>
+                <h3 className="font-semibold text-sm sm:text-lg mb-2">{t('addProductButton')}</h3>
+                <p className="text-xs sm:text-sm text-gray-600">{t('addProductDesc')}</p>
               </CardContent>
             </Card>
             
@@ -251,8 +251,8 @@ const Home = () => {
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-food-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                   <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8 text-food-600" />
                 </div>
-                <h3 className="font-semibold text-sm sm:text-lg mb-2">Mes Messages</h3>
-                <p className="text-xs sm:text-sm text-gray-600">Communiquez avec les autres utilisateurs</p>
+                <h3 className="font-semibold text-sm sm:text-lg mb-2">{t('myMessagesButton')}</h3>
+                <p className="text-xs sm:text-sm text-gray-600">{t('myMessagesDesc')}</p>
               </CardContent>
             </Card>
           </div>

@@ -239,6 +239,11 @@ const translations = {
     cannotContactYourself: "Action impossible",
     cannotContactYourselfDescription: "Vous ne pouvez pas vous contacter vous-même",
     reservationMessage: "Bonjour ! Je suis intéressé(e) par votre produit '{productName}'. Quand puis-je le récupérer ?",
+    quickActions: "Actions Rapides",
+    addProductButton: "Ajouter un produit",
+    addProductDesc: "Partagez vos produits avec la communauté",
+    myMessagesButton: "Mes Messages",
+    myMessagesDesc: "Communiquez avec les autres utilisateurs",
   },
   ar: {
     // App
@@ -469,6 +474,11 @@ const translations = {
     cannotContactYourself: "إجراء غير ممكن",
     cannotContactYourselfDescription: "لا يمكنك التواصل مع نفسك",
     reservationMessage: "مرحباً! أنا مهتم بمنتجك '{productName}'. متى يمكنني استلامه؟",
+    quickActions: "إجراءات سريعة",
+    addProductButton: "إضافة منتج",
+    addProductDesc: "شارك منتجاتك مع المجتمع",
+    myMessagesButton: "رسائلي",
+    myMessagesDesc: "تواصل مع المستخدمين الآخرين",
   }
 };
 

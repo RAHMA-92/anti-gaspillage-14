@@ -119,7 +119,7 @@ const SignUp = () => {
 
       toast({
         title: "🎉 Inscription réussie !",
-        description: "Bienvenue sur EcoShare Algeria ! Finalisez votre inscription avec le paiement de 500 DA.",
+        description: "Bienvenue sur Anti-Gaspillage Algeria ! Finalisez votre inscription avec le paiement de 500 DA.",
       });
 
       // Redirection vers la page de paiement d'inscription
@@ -151,7 +151,7 @@ const SignUp = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-lg border border-eco-200 mb-6">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
-              Rejoignez EcoShare Algeria
+              Rejoignez Anti-Gaspillage Algeria
             </h1>
             <p className="text-gray-600 mb-4">
               Créez votre compte et contribuez à réduire le gaspillage alimentaire

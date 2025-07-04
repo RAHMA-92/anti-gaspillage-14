@@ -118,7 +118,7 @@ const Payment = () => {
             </h1>
             <p className="text-gray-600">
               {isRegistration 
-                ? 'Frais d\'inscription unique pour rejoindre EcoShare Algeria'
+                ? 'Frais d\'inscription unique pour rejoindre Anti-Gaspillage Algeria'
                 : 'Paiement sécurisé pour votre commande'
               }
             </p>
@@ -137,7 +137,7 @@ const Payment = () => {
             <CardContent className="space-y-4">
               <div className="flex justify-between items-center">
                 <span className="font-medium">
-                  {isRegistration ? 'Frais d\'inscription EcoShare' : productName}
+                  {isRegistration ? 'Frais d\'inscription Anti-Gaspillage' : productName}
                 </span>
                 <span className="font-bold text-eco-600">
                   {isRegistration ? '500 DA' : `${productPrice} DA`}
