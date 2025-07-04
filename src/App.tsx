@@ -26,6 +26,7 @@ import Settings from "./pages/Settings";
 import ReservedProducts from "./pages/ReservedProducts";
 import NotFound from "./pages/NotFound";
 import Cart from "./pages/Cart";
+import Payment from "./pages/Payment";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -75,6 +76,7 @@ const AppContent = () => {
             <Route path="/settings" element={<Settings />} />
             <Route path="/reserved" element={<ReservedProducts />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/payment" element={<Payment />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

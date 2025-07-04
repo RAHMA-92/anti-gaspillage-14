@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useProducts } from '@/contexts/ProductContext';
 import { useMessages } from '@/contexts/MessageContext';
@@ -12,7 +11,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Search, Filter, MapPin, Calendar, User, MessageCircle, Heart, Gift, Star, Bell } from 'lucide-react';
+import { Search, Filter, MapPin, Calendar, User, MessageCircle, Heart, Gift, Star, Bell, ShoppingCart, CreditCard } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 
@@ -175,6 +174,40 @@ const Products = () => {
     navigate('/reserved');
   };
 
+  const handleBuy = (product: any) => {
+    if (!profileData.name) {
+      toast({
+        title: "⚠️ " + t('loginRequired'),
+        description: t('loginRequiredDescription'),
+        variant: "destructive"
+      });
+      navigate('/signin');
+      return;
+    }
+
+    if (isOwnProduct(product)) {
+      toast({
+        title: "⚠️ " + t('cannotReserveOwnProduct'),
+        description: "Vous ne pouvez pas acheter votre propre produit",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    if (product.reserved) {
+      toast({
+        title: "⚠️ " + t('alreadyReserved'),
+        description: t('productAlreadyReserved'),
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Redirection vers la page de paiement
+    const priceNumber = parseInt(product.price.replace(/[^\d]/g, ''));
+    navigate(`/payment?product=${encodeURIComponent(product.name)}&price=${priceNumber}`);
+  };
+
   const handleContact = (product: any) => {
     if (!profileData.name) {
       toast({
@@ -245,7 +278,7 @@ const Products = () => {
           </p>
         </div>
 
-        {/* Search and Filters - Mobile Responsive */}
+        {/* Search and Filters */}
         <div className="mb-4 sm:mb-8 space-y-3 sm:space-y-4">
           {/* Search */}
           <div className="relative">
@@ -258,7 +291,7 @@ const Products = () => {
             />
           </div>
 
-          {/* Filters Grid - Mobile Responsive */}
+          {/* Filters Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
             <Select value={selectedCategory} onValueChange={setSelectedCategory}>
               <SelectTrigger className="h-10 sm:h-12 border-2 text-sm sm:text-base">
@@ -371,7 +404,7 @@ const Products = () => {
           </div>
         </div>
 
-        {/* Products Grid - Mobile Responsive */}
+        {/* Products Grid */}
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
             {filteredProducts.map((product) => (
@@ -437,13 +470,27 @@ const Products = () => {
                   
                   <div className="flex gap-1 sm:gap-2">
                     {!product.reserved && !isOwnProduct(product) && (
-                      <Button 
-                        onClick={() => handleReserve(product)}
-                        className="flex-1 bg-eco-600 hover:bg-eco-700 text-xs sm:text-sm h-8 sm:h-10"
-                        size="sm"
-                      >
-                        {t('reserve')}
-                      </Button>
+                      <>
+                        {product.isDonation ? (
+                          <Button 
+                            onClick={() => handleReserve(product)}
+                            className="flex-1 bg-eco-600 hover:bg-eco-700 text-xs sm:text-sm h-8 sm:h-10"
+                            size="sm"
+                          >
+                            <Heart className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                            {t('reserve')}
+                          </Button>
+                        ) : (
+                          <Button 
+                            onClick={() => handleBuy(product)}
+                            className="flex-1 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-xs sm:text-sm h-8 sm:h-10"
+                            size="sm"
+                          >
+                            <CreditCard className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                            Acheter
+                          </Button>
+                        )}
+                      </>
                     )}
                     
                     {!isOwnProduct(product) && (
@@ -500,7 +547,7 @@ const Products = () => {
           </div>
         )}
 
-        {/* Contact Dialog - Mobile Responsive */}
+        {/* Contact Dialog */}
         {selectedProduct && (
           <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
             <DialogContent className={`${language === 'ar' ? 'rtl' : 'ltr'} max-w-[95vw] sm:max-w-md`}>
