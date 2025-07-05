@@ -46,7 +46,7 @@ export const useProducts = () => {
 };
 
 const initialProducts: Product[] = [
-  // Alimentaire - Plats préparés
+  // Plats préparés
   {
     id: 1,
     name: "Couscous traditionnel fait maison",
@@ -57,7 +57,7 @@ const initialProducts: Product[] = [
     image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&h=300&fit=crop",
     expiryDate: "2024-12-31",
     reserved: false,
-    category: "Alimentaire",
+    category: "Plats préparés",
     condition: "Excellent",
     isDonation: false
   },
@@ -71,7 +71,7 @@ const initialProducts: Product[] = [
     image: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=400&h=300&fit=crop",
     expiryDate: "2024-12-30",
     reserved: false,
-    category: "Alimentaire",
+    category: "Plats préparés",
     condition: "Très bon",
     isDonation: false
   },
@@ -85,12 +85,12 @@ const initialProducts: Product[] = [
     image: "https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=300&fit=crop",
     expiryDate: "2024-12-29",
     reserved: false,
-    category: "Alimentaire",
+    category: "Restaurants",
     condition: "Excellent",
     isDonation: false
   },
 
-  // Alimentaire - Fruits et légumes
+  // Matières premières
   {
     id: 4,
     name: "Fruits de saison bio",
@@ -101,7 +101,7 @@ const initialProducts: Product[] = [
     image: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=400&h=300&fit=crop",
     expiryDate: "2024-12-28",
     reserved: false,
-    category: "Alimentaire",
+    category: "Matières premières",
     condition: "Excellent",
     isDonation: false,
     isFlashOffer: true
@@ -116,7 +116,7 @@ const initialProducts: Product[] = [
     image: "https://images.unsplash.com/photo-1574316071802-0d684efa7bf5?w=400&h=300&fit=crop",
     expiryDate: "2024-12-27",
     reserved: false,
-    category: "Alimentaire",
+    category: "Matières premières",
     condition: "Excellent",
     isDonation: false
   },
@@ -130,232 +130,10 @@ const initialProducts: Product[] = [
     image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&h=300&fit=crop",
     expiryDate: "2025-06-26",
     reserved: false,
-    category: "Alimentaire",
+    category: "Matières premières",
     condition: "Neuf",
     isDonation: false
   },
-
-  // Alimentaire - Pâtisseries
-  {
-    id: 7,
-    name: "Baklava aux amandes",
-    description: "Délicieux baklava croustillant aux amandes et miel, préparé selon la tradition orientale.",
-    price: "2000 DA",
-    location: "Annaba",
-    user: "Pâtisserie Orientale",
-    image: "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=300&fit=crop",
-    expiryDate: "2025-01-05",
-    reserved: false,
-    category: "Alimentaire",
-    condition: "Excellent",
-    isDonation: false
-  },
-  {
-    id: 8,
-    name: "Makroudh aux dattes",
-    description: "Pâtisserie traditionnelle algérienne fourrée aux dattes, un délice authentique.",
-    price: "1200 DA",
-    location: "Sétif",
-    user: "Halima Bakery",
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop",
-    expiryDate: "2025-01-03",
-    reserved: false,
-    category: "Alimentaire",
-    condition: "Excellent",
-    isDonation: false
-  },
-  {
-    id: 9,
-    name: "Chouarak brioche",
-    description: "Pain brioché moelleux parfumé à la fleur d'oranger, parfait pour le petit-déjeuner.",
-    price: "800 DA",
-    location: "Mostaganem",
-    user: "Boulangerie du Soleil",
-    image: "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=400&h=300&fit=crop",
-    expiryDate: "2025-01-02",
-    reserved: false,
-    category: "Alimentaire",
-    condition: "Très bon",
-    isDonation: false
-  },
-
-  // Maison - Vêtements
-  {
-    id: 10,
-    name: "Robe traditionnelle Karakou",
-    description: "Magnifique robe traditionnelle algéroise brodée à la main, portée une seule fois.",
-    price: "15000 DA",
-    location: "Alger",
-    user: "Leila Boutique",
-    image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=300&fit=crop",
-    expiryDate: "2025-06-30",
-    reserved: false,
-    category: "Maison",
-    condition: "Comme neuf",
-    isDonation: false
-  },
-  {
-    id: 11,
-    name: "Veste en cuir vintage",
-    description: "Veste en cuir véritable des années 90, style intemporel et toujours à la mode.",
-    price: "8000 DA",
-    location: "Oran",
-    user: "Vintage Store",
-    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=300&fit=crop",
-    expiryDate: "2025-12-31",
-    reserved: false,
-    category: "Maison",
-    condition: "Très bon",
-    isDonation: false
-  },
-  {
-    id: 12,
-    name: "Lot de vêtements enfants",
-    description: "Collection de vêtements pour enfants de 3-5 ans, très bon état, marques de qualité.",
-    price: "0 DA",
-    location: "Constantine",
-    user: "Maman Solidaire",
-    image: "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a9?w=400&h=300&fit=crop",
-    expiryDate: "2025-12-31",
-    reserved: false,
-    category: "Maison",
-    condition: "Bon",
-    isDonation: true
-  },
-
-  // Maison - Vaisselle
-  {
-    id: 13,
-    name: "Service à thé en porcelaine",
-    description: "Élégant service à thé en porcelaine fine avec motifs dorés, parfait pour les invités.",
-    price: "5000 DA",
-    location: "Tlemcen",
-    user: "Antiquités du Maghreb",
-    image: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&h=300&fit=crop",
-    expiryDate: "2025-12-31",
-    reserved: false,
-    category: "Maison",
-    condition: "Excellent",
-    isDonation: false
-  },
-  {
-    id: 14,
-    name: "Set d'assiettes artisanales",
-    description: "Belles assiettes en céramique faites à la main, décoration berbère authentique.",
-    price: "3500 DA",
-    location: "Ghardaïa",
-    user: "Artisan Touareg",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-    expiryDate: "2025-12-31",
-    reserved: false,
-    category: "Maison",
-    condition: "Neuf",
-    isDonation: false
-  },
-  {
-    id: 15,
-    name: "Verres à thé traditionnels",
-    description: "Set de 12 verres à thé algériens traditionnels avec plateau en métal argenté.",
-    price: "2500 DA",
-    location: "Laghouat",
-    user: "Tradition & Modernité",
-    image: "https://images.unsplash.com/photo-1571931195914-3b9ae89cda4d?w=400&h=300&fit=crop",
-    expiryDate: "2025-12-31",
-    reserved: false,
-    category: "Maison",
-    condition: "Très bon",
-    isDonation: false
-  },
-
-  // Santé - Cosmétiques
-  {
-    id: 16,
-    name: "Huile d'argan pure du Maroc",
-    description: "Huile d'argan 100% naturelle, excellente pour la peau et les cheveux. Bouteille 100ml.",
-    price: "2200 DA",
-    location: "Alger",
-    user: "Beauté Naturelle",
-    image: "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=400&h=300&fit=crop",
-    expiryDate: "2025-08-30",
-    reserved: false,
-    category: "Santé",
-    condition: "Neuf",
-    isDonation: false
-  },
-  {
-    id: 17,
-    name: "Savon noir beldi authentique",
-    description: "Savon noir traditionnel du Maghreb pour hammam, exfoliant naturel et purifiant.",
-    price: "800 DA",
-    location: "Tlemcen",
-    user: "Hammam Traditions",
-    image: "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?w=400&h=300&fit=crop",
-    expiryDate: "2026-01-15",
-    reserved: false,
-    category: "Santé",
-    condition: "Neuf",
-    isDonation: false
-  },
-  {
-    id: 18,
-    name: "Crème hydratante à l'aloé vera",
-    description: "Crème apaisante et hydratante à base d'aloé vera bio, idéale pour peaux sensibles.",
-    price: "1500 DA",
-    location: "Oran",
-    user: "Green Cosmetics",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
-    expiryDate: "2025-09-20",
-    reserved: false,
-    category: "Santé",
-    condition: "Neuf",
-    isDonation: false
-  },
-
-  // Éducation - Livres
-  {
-    id: 19,
-    name: "Collection Tahar Djaout",
-    description: "Œuvres complètes du célèbre écrivain algérien, état impeccable, éditions originales.",
-    price: "4500 DA",
-    location: "Alger",
-    user: "Librairie du Savoir",
-    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
-    expiryDate: "2025-12-31",
-    reserved: false,
-    category: "Éducation",
-    condition: "Excellent",
-    isDonation: false
-  },
-  {
-    id: 20,
-    name: "Manuels scolaires lycée",
-    description: "Collection complète de manuels pour terminale scientifique, programme algérien actuel.",
-    price: "0 DA",
-    location: "Constantine",
-    user: "Association Éducative",
-    image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=300&fit=crop",
-    expiryDate: "2025-12-31",
-    reserved: false,
-    category: "Éducation",
-    condition: "Bon",
-    isDonation: true
-  },
-  {
-    id: 21,
-    name: "Dictionnaire français-arabe",
-    description: "Grand dictionnaire bilingue français-arabe, indispensable pour les étudiants.",
-    price: "3000 DA",
-    location: "Batna",
-    user: "Étudiant Motivé",
-    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=300&fit=crop",
-    expiryDate: "2025-12-31",
-    reserved: false,
-    category: "Éducation",
-    condition: "Très bon",
-    isDonation: false
-  },
-
-  // Produits supplémentaires pour plus de variété
   {
     id: 22,
     name: "Olives artisanales de Kabylie",
@@ -366,7 +144,7 @@ const initialProducts: Product[] = [
     image: "https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=400&h=300&fit=crop",
     expiryDate: "2025-03-15",
     reserved: false,
-    category: "Alimentaire",
+    category: "Matières premières",
     condition: "Excellent",
     isDonation: false
   },
@@ -380,23 +158,9 @@ const initialProducts: Product[] = [
     image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400&h=300&fit=crop",
     expiryDate: "2026-12-31",
     reserved: false,
-    category: "Alimentaire",
+    category: "Matières premières",
     condition: "Excellent",
     isDonation: false
-  },
-  {
-    id: 24,
-    name: "Couvertures en laine",
-    description: "Couvertures traditionnelles en laine pure, parfaites pour l'hiver. Lot de 3 pièces.",
-    price: "0 DA",
-    location: "Constantine",
-    user: "Association Solidarité",
-    image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400&h=300&fit=crop",
-    expiryDate: "2025-12-31",
-    reserved: false,
-    category: "Maison",
-    condition: "Très bon",
-    isDonation: true
   },
   {
     id: 25,
@@ -408,9 +172,245 @@ const initialProducts: Product[] = [
     image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=300&fit=crop",
     expiryDate: "2025-08-30",
     reserved: false,
-    category: "Alimentaire",
+    category: "Matières premières",
     condition: "Excellent",
     isDonation: false
+  },
+
+  // Pâtisseries
+  {
+    id: 7,
+    name: "Baklava aux amandes",
+    description: "Délicieux baklava croustillant aux amandes et miel, préparé selon la tradition orientale.",
+    price: "2000 DA",
+    location: "Annaba",
+    user: "Pâtisserie Orientale",
+    image: "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=300&fit=crop",
+    expiryDate: "2025-01-05",
+    reserved: false,
+    category: "Pâtisseries",
+    condition: "Excellent",
+    isDonation: false
+  },
+  {
+    id: 8,
+    name: "Makroudh aux dattes",
+    description: "Pâtisserie traditionnelle algérienne fourrée aux dattes, un délice authentique.",
+    price: "1200 DA",
+    location: "Sétif",
+    user: "Halima Bakery",
+    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop",
+    expiryDate: "2025-01-03",
+    reserved: false,
+    category: "Pâtisseries",
+    condition: "Excellent",
+    isDonation: false
+  },
+  {
+    id: 9,
+    name: "Chouarak brioche",
+    description: "Pain brioché moelleux parfumé à la fleur d'oranger, parfait pour le petit-déjeuner.",
+    price: "800 DA",
+    location: "Mostaganem",
+    user: "Boulangerie du Soleil",
+    image: "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=400&h=300&fit=crop",
+    expiryDate: "2025-01-02",
+    reserved: false,
+    category: "Boulangeries",
+    condition: "Très bon",
+    isDonation: false
+  },
+
+  // Vêtements
+  {
+    id: 10,
+    name: "Robe traditionnelle Karakou",
+    description: "Magnifique robe traditionnelle algéroise brodée à la main, portée une seule fois.",
+    price: "15000 DA",
+    location: "Alger",
+    user: "Leila Boutique",
+    image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=300&fit=crop",
+    expiryDate: "2025-06-30",
+    reserved: false,
+    category: "Vêtements",
+    condition: "Comme neuf",
+    isDonation: false
+  },
+  {
+    id: 11,
+    name: "Veste en cuir vintage",
+    description: "Veste en cuir véritable des années 90, style intemporel et toujours à la mode.",
+    price: "8000 DA",
+    location: "Oran",
+    user: "Vintage Store",
+    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=300&fit=crop",
+    expiryDate: "2025-12-31",
+    reserved: false,
+    category: "Vêtements",
+    condition: "Très bon",
+    isDonation: false
+  },
+  {
+    id: 12,
+    name: "Lot de vêtements enfants",
+    description: "Collection de vêtements pour enfants de 3-5 ans, très bon état, marques de qualité.",
+    price: "0 DA",
+    location: "Constantine",
+    user: "Maman Solidaire",
+    image: "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a9?w=400&h=300&fit=crop",
+    expiryDate: "2025-12-31",
+    reserved: false,
+    category: "Dons solidaires",
+    condition: "Bon",
+    isDonation: true
+  },
+
+  // Vaisselles
+  {
+    id: 13,
+    name: "Service à thé en porcelaine",
+    description: "Élégant service à thé en porcelaine fine avec motifs dorés, parfait pour les invités.",
+    price: "5000 DA",
+    location: "Tlemcen",
+    user: "Antiquités du Maghreb",
+    image: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&h=300&fit=crop",
+    expiryDate: "2025-12-31",
+    reserved: false,
+    category: "Vaisselles",
+    condition: "Excellent",
+    isDonation: false
+  },
+  {
+    id: 14,
+    name: "Set d'assiettes artisanales",
+    description: "Belles assiettes en céramique faites à la main, décoration berbère authentique.",
+    price: "3500 DA",
+    location: "Ghardaïa",
+    user: "Artisan Touareg",
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+    expiryDate: "2025-12-31",
+    reserved: false,
+    category: "Vaisselles",
+    condition: "Neuf",
+    isDonation: false
+  },
+  {
+    id: 15,
+    name: "Verres à thé traditionnels",
+    description: "Set de 12 verres à thé algériens traditionnels avec plateau en métal argenté.",
+    price: "2500 DA",
+    location: "Laghouat",
+    user: "Tradition & Modernité",
+    image: "https://images.unsplash.com/photo-1571931195914-3b9ae89cda4d?w=400&h=300&fit=crop",
+    expiryDate: "2025-12-31",
+    reserved: false,
+    category: "Vaisselles",
+    condition: "Très bon",
+    isDonation: false
+  },
+
+  // Cosmétiques
+  {
+    id: 16,
+    name: "Huile d'argan pure du Maroc",
+    description: "Huile d'argan 100% naturelle, excellente pour la peau et les cheveux. Bouteille 100ml.",
+    price: "2200 DA",
+    location: "Alger",
+    user: "Beauté Naturelle",
+    image: "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=400&h=300&fit=crop",
+    expiryDate: "2025-08-30",
+    reserved: false,
+    category: "Cosmétiques",
+    condition: "Neuf",
+    isDonation: false
+  },
+  {
+    id: 17,
+    name: "Savon noir beldi authentique",
+    description: "Savon noir traditionnel du Maghreb pour hammam, exfoliant naturel et purifiant.",
+    price: "800 DA",
+    location: "Tlemcen",
+    user: "Hammam Traditions",
+    image: "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?w=400&h=300&fit=crop",
+    expiryDate: "2026-01-15",
+    reserved: false,
+    category: "Cosmétiques",
+    condition: "Neuf",
+    isDonation: false
+  },
+  {
+    id: 18,
+    name: "Crème hydratante à l'aloé vera",
+    description: "Crème apaisante et hydratante à base d'aloé vera bio, idéale pour peaux sensibles.",
+    price: "1500 DA",
+    location: "Oran",
+    user: "Green Cosmetics",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
+    expiryDate: "2025-09-20",
+    reserved: false,
+    category: "Cosmétiques",
+    condition: "Neuf",
+    isDonation: false
+  },
+
+  // Fournitures scolaires
+  {
+    id: 19,
+    name: "Collection Tahar Djaout",
+    description: "Œuvres complètes du célèbre écrivain algérien, état impeccable, éditions originales.",
+    price: "4500 DA",
+    location: "Alger",
+    user: "Librairie du Savoir",
+    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
+    expiryDate: "2025-12-31",
+    reserved: false,
+    category: "Fournitures scolaires",
+    condition: "Excellent",
+    isDonation: false
+  },
+  {
+    id: 20,
+    name: "Manuels scolaires lycée",
+    description: "Collection complète de manuels pour terminale scientifique, programme algérien actuel.",
+    price: "0 DA",
+    location: "Constantine",
+    user: "Association Éducative",
+    image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=300&fit=crop",
+    expiryDate: "2025-12-31",
+    reserved: false,
+    category: "Dons solidaires",
+    condition: "Bon",
+    isDonation: true
+  },
+  {
+    id: 21,
+    name: "Dictionnaire français-arabe",
+    description: "Grand dictionnaire bilingue français-arabe, indispensable pour les étudiants.",
+    price: "3000 DA",
+    location: "Batna",
+    user: "Étudiant Motivé",
+    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=300&fit=crop",
+    expiryDate: "2025-12-31",
+    reserved: false,
+    category: "Fournitures scolaires",
+    condition: "Très bon",
+    isDonation: false
+  },
+
+  // Produits pharmaceutiques et dons solidaires
+  {
+    id: 24,
+    name: "Couvertures en laine",
+    description: "Couvertures traditionnelles en laine pure, parfaites pour l'hiver. Lot de 3 pièces.",
+    price: "0 DA",
+    location: "Constantine",
+    user: "Association Solidarité",
+    image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400&h=300&fit=crop",
+    expiryDate: "2025-12-31",
+    reserved: false,
+    category: "Dons solidaires",
+    condition: "Très bon",
+    isDonation: true
   },
   {
     id: 26,
@@ -422,7 +422,7 @@ const initialProducts: Product[] = [
     image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
     expiryDate: "2025-12-31",
     reserved: false,
-    category: "Éducation",
+    category: "Dons solidaires",
     condition: "Neuf",
     isDonation: true
   },
@@ -436,7 +436,7 @@ const initialProducts: Product[] = [
     image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=300&fit=crop",
     expiryDate: "2025-01-15",
     reserved: false,
-    category: "Maison",
+    category: "Matières premières",
     condition: "Excellent",
     isDonation: false,
     isFlashOffer: true
@@ -451,7 +451,7 @@ const initialProducts: Product[] = [
     image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
     expiryDate: "2025-04-20",
     reserved: false,
-    category: "Santé",
+    category: "Produits pharmaceutiques",
     condition: "Neuf",
     isDonation: false
   }

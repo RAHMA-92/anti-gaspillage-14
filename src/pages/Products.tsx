@@ -35,10 +35,17 @@ const Products = () => {
 
   const categories = [
     { value: 'all', label: t('allCategories') },
-    { value: 'Alimentaire', label: t('food') },
-    { value: 'Maison', label: t('household') },
-    { value: 'Santé', label: t('hygiene') },
-    { value: 'Éducation', label: t('school') }
+    { value: 'Plats préparés', label: t('preparedMeals') },
+    { value: 'Pâtisseries', label: t('pastries') },
+    { value: 'Boulangeries', label: t('bakery') },
+    { value: 'Restaurants', label: t('restaurants') },
+    { value: 'Cosmétiques', label: t('cosmetics') },
+    { value: 'Produits pharmaceutiques', label: t('pharmacy') },
+    { value: 'Fournitures scolaires', label: t('school') },
+    { value: 'Vaisselles', label: t('tableware') },
+    { value: 'Vêtements', label: t('clothing') },
+    { value: 'Matières premières', label: t('rawMaterials') },
+    { value: 'Dons solidaires', label: t('donations') }
   ];
 
   const priceRanges = [
