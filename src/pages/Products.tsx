@@ -14,6 +14,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Search, Filter, MapPin, Calendar, User, MessageCircle, Heart, Gift, Star, Bell, ShoppingCart, CreditCard } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import WilayaSelect from '@/components/WilayaSelect';
 
 const Products = () => {
   const { t, language } = useLanguage();
@@ -321,18 +322,12 @@ const Products = () => {
               </SelectContent>
             </Select>
 
-            <Select value={locationFilter} onValueChange={setLocationFilter}>
-              <SelectTrigger className="h-10 sm:h-12 border-2 text-sm sm:text-base">
-                <SelectValue placeholder="Localisation" />
-              </SelectTrigger>
-              <SelectContent>
-                {locations.map((location) => (
-                  <SelectItem key={location.value} value={location.value}>
-                    {location.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            <WilayaSelect
+              value={locationFilter}
+              onChange={setLocationFilter}
+              placeholder="Filtrer par wilaya"
+              label=""
+            />
 
             <Button
               variant="outline"

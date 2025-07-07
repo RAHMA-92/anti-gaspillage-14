@@ -11,6 +11,7 @@ import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
 import { UserPlus, Mail, Lock, User, MapPin, Upload, Eye, EyeOff, ArrowLeft, Star, Gift, Shield, Crown } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+import WilayaSelect from '@/components/WilayaSelect';
 
 const SignUp = () => {
   const { t } = useLanguage();
@@ -88,8 +89,8 @@ const SignUp = () => {
 
     if (!formData.city.trim()) {
       toast({
-        title: "⚠️ Ville requise",
-        description: "Veuillez indiquer votre ville",
+        title: "⚠️ Wilaya requise",
+        description: "Veuillez sélectionner votre wilaya",
         variant: "destructive"
       });
       return false;
@@ -351,18 +352,12 @@ const SignUp = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="city">Ville *</Label>
-                  <div className="relative">
-                    <MapPin className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                    <Input
-                      id="city"
-                      placeholder="Alger"
-                      value={formData.city}
-                      onChange={(e) => handleInputChange('city', e.target.value)}
-                      className="pl-10"
-                      required
-                    />
-                  </div>
+                  <WilayaSelect
+                    value={formData.city}
+                    onChange={(value) => handleInputChange('city', value)}
+                    label="Wilaya *"
+                    placeholder="Sélectionnez votre wilaya"
+                  />
                 </div>
               </div>
 

@@ -26,15 +26,16 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 
 const categories = [
-  { key: 'food', icon: Utensils, color: 'bg-food-100 text-food-700' },
+  { key: 'food', icon: Apple, color: 'bg-food-100 text-food-700' },
   { key: 'preparedMeals', icon: Utensils, color: 'bg-eco-100 text-eco-700' },
-  { key: 'bakery', icon: ShoppingBag, color: 'bg-yellow-100 text-yellow-700' },
-  { key: 'rawMaterials', icon: Wrench, color: 'bg-gray-100 text-gray-700' },
-  { key: 'hygiene', icon: Sparkles, color: 'bg-blue-100 text-blue-700' },
+  { key: 'pastries', icon: ShoppingBag, color: 'bg-yellow-100 text-yellow-700' },
+  { key: 'bakery', icon: ShoppingBag, color: 'bg-orange-100 text-orange-700' },
   { key: 'household', icon: HomeIcon, color: 'bg-purple-100 text-purple-700' },
+  { key: 'clothing', icon: ShoppingBag, color: 'bg-pink-100 text-pink-700' },
   { key: 'school', icon: BookOpen, color: 'bg-indigo-100 text-indigo-700' },
+  { key: 'hygiene', icon: Sparkles, color: 'bg-blue-100 text-blue-700' },
   { key: 'pharmacy', icon: Pill, color: 'bg-green-100 text-green-700' },
-  { key: 'local', icon: Apple, color: 'bg-eco-100 text-eco-700' },
+  { key: 'rawMaterials', icon: Wrench, color: 'bg-gray-100 text-gray-700' },
 ];
 
 const Home = () => {

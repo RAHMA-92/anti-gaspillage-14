@@ -37,7 +37,7 @@ const RatingSystem: React.FC<RatingSystemProps> = ({ productId, currentUserId })
       userAvatar: "https://images.unsplash.com/photo-1494790108755-2616b612b1e1?w=100&h=100&fit=crop&crop=face",
       rating: 5,
       comment: "Excellent produit, très frais et de qualité. Le vendeur était très sympa !",
-      date: "2024-01-15",
+      date: "2025-01-15",
       helpful: 8,
       verified: true
     },
@@ -49,7 +49,7 @@ const RatingSystem: React.FC<RatingSystemProps> = ({ productId, currentUserId })
       userAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
       rating: 4,
       comment: "Bon rapport qualité-prix. Récupéré rapidement.",
-      date: "2024-01-10",
+      date: "2025-01-10",
       helpful: 3,
       verified: false
     }
