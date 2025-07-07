@@ -144,18 +144,6 @@ const Payment = () => {
                 </span>
               </div>
               
-              {!isRegistration && (
-                <>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">
-                      Frais de plateforme (10%)
-                    </span>
-                    <span className="text-sm text-gray-600">{platformFee} DA</span>
-                  </div>
-                  
-                  <Separator />
-                </>
-              )}
               
               <div className="flex justify-between items-center text-lg font-bold">
                 <span>Total à payer</span>
