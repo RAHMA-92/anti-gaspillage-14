@@ -15,6 +15,8 @@ import { Search, Filter, MapPin, Calendar, User, MessageCircle, Heart, Gift, Sta
 import { toast } from '@/hooks/use-toast';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import WilayaSelect from '@/components/WilayaSelect';
+import { RatingSystem } from '@/components/RatingSystem';
+import { QuranicWisdom } from '@/components/QuranicWisdom';
 
 const Products = () => {
   const { t, language } = useLanguage();
@@ -401,11 +403,17 @@ const Products = () => {
           </div>
         </div>
 
+        {/* Quranic Wisdom Section */}
+        <div className="mb-6">
+          <QuranicWisdom />
+        </div>
+
         {/* Products Grid */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-8">
             {filteredProducts.map((product) => (
-              <Card key={product.id} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-gray-200">
+              <div key={product.id} className="space-y-4">
+                <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-gray-200 border-2">
                 <div className="relative">
                   <img 
                     src={product.image} 
@@ -514,6 +522,13 @@ const Products = () => {
                   </div>
                 </CardContent>
               </Card>
+              
+              {/* User Rating System for each product */}
+              <RatingSystem 
+                userId={product.user} 
+                userName={product.user}
+              />
+            </div>
             ))}
           </div>
         ) : (

@@ -26,12 +26,12 @@ const Settings = () => {
     profileVisibility: true
   });
 
-  const handleLanguageChange = (newLanguage: 'fr' | 'ar') => {
+  const handleLanguageChange = (newLanguage: 'fr' | 'ar' | 'en') => {
     console.log(`Language changed to: ${newLanguage}`);
     setLanguage(newLanguage);
     toast({
       title: t('language'),
-      description: `${t('language')} ${newLanguage === 'fr' ? t('french') : t('arabic')}`,
+      description: `${t('language')} ${newLanguage === 'fr' ? t('french') : newLanguage === 'ar' ? t('arabic') : t('english')}`,
     });
   };
 
@@ -108,6 +108,7 @@ const Settings = () => {
                     <SelectContent>
                       <SelectItem value="fr">🇫🇷 {t('french')}</SelectItem>
                       <SelectItem value="ar">🇩🇿 {t('arabic')}</SelectItem>
+                      <SelectItem value="en">🇺🇸 {t('english')}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
