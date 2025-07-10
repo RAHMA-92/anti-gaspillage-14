@@ -148,64 +148,52 @@ export const RatingSystem: React.FC<RatingSystemProps> = ({ userId, userName, us
           </Dialog>
         </CardTitle>
       </CardHeader>
-      <CardContent>
-        {/* Average Rating */}
-        <div className="flex items-center space-x-4 mb-6 p-4 bg-muted rounded-lg">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary">
+      <CardContent className="p-4">
+        {/* Compact Average Rating */}
+        <div className="flex items-center justify-between mb-4 p-3 bg-muted rounded-lg">
+          <div className="flex items-center space-x-3">
+            <div className="text-2xl font-bold text-primary">
               {averageRating.toFixed(1)}
             </div>
-            <div className="text-sm text-muted-foreground">
-              {t('averageRating')}
-            </div>
+            {renderStars(Math.round(averageRating), false, 20)}
           </div>
-          <div className="flex-1">
-            {renderStars(Math.round(averageRating), false, 24)}
-            <div className="flex items-center space-x-2 mt-2">
-              <Badge variant="secondary" className="flex items-center space-x-1">
-                <Shield className="h-3 w-3" />
-                <span>{t('trustworthy')}</span>
-              </Badge>
-              <Badge variant="outline" className="flex items-center space-x-1">
-                <ThumbsUp className="h-3 w-3" />
-                <span>{t('reliable')}</span>
-              </Badge>
-            </div>
+          <div className="flex space-x-2">
+            <Badge variant="secondary" className="text-xs">
+              <Shield className="h-3 w-3 mr-1" />
+              {t('trustworthy')}
+            </Badge>
           </div>
         </div>
 
-        {/* Reviews List */}
-        <div className="space-y-4">
+        {/* Compact Reviews List - Show only last 2 reviews */}
+        <div className="space-y-3">
           {reviews.length === 0 ? (
-            <div className="text-center py-8 text-muted-foreground">
-              <MessageSquare className="h-12 w-12 mx-auto mb-2 opacity-50" />
-              <p>{t('noReviews')}</p>
+            <div className="text-center py-4 text-muted-foreground">
+              <MessageSquare className="h-8 w-8 mx-auto mb-1 opacity-50" />
+              <p className="text-sm">{t('noReviews')}</p>
             </div>
           ) : (
-            reviews.map((review) => (
-              <div key={review.id} className="border rounded-lg p-4">
-                <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <div className="flex items-center space-x-2">
-                      <span className="font-medium">{review.reviewerName}</span>
-                      {renderStars(review.rating, false, 16)}
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      {new Date(review.date).toLocaleDateString()}
-                    </div>
+            reviews.slice(0, 2).map((review) => (
+              <div key={review.id} className="border rounded-lg p-3">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center space-x-2">
+                    <span className="font-medium text-sm">{review.reviewerName}</span>
+                    {renderStars(review.rating, false, 14)}
                   </div>
+                  <span className="text-xs text-muted-foreground">
+                    {new Date(review.date).toLocaleDateString()}
+                  </span>
                 </div>
                 {review.comment && (
-                  <p className="text-sm mt-2 mb-3">{review.comment}</p>
+                  <p className="text-xs text-gray-600 line-clamp-2">{review.comment}</p>
                 )}
-                <div className="flex items-center space-x-2">
-                  <Button variant="ghost" size="sm" className="text-xs">
-                    <ThumbsUp className="h-3 w-3 mr-1" />
-                    {review.helpful}
-                  </Button>
-                </div>
               </div>
             ))
+          )}
+          {reviews.length > 2 && (
+            <p className="text-center text-xs text-muted-foreground">
+              +{reviews.length - 2} autres avis...
+            </p>
           )}
         </div>
       </CardContent>
